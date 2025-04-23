@@ -14,6 +14,9 @@
       margin: 0 auto;
       text-align: left;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     .result-box {
       border-left: 6px solid #4CAF50;
       padding-left: 16px;
@@ -56,17 +59,33 @@
       display: inline-block;
       margin-top: 20px;
     }
+    .go-top {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      color: #8cb3be;
+      text-decoration: none;
+      font-style: italic;
+      font-size: 14px;
+    }
     @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="result-box">
+
+  <!-- 이동할 위치 -->
+  <div id="top-section" class="result-box">
     <h2>✅ 안정 상태입니다</h2>
     <p>스트레칭 습관이 비교적 잘 유지되고 있습니다.<br/>지금처럼 꾸준히 몸의 유연성을 관리해주세요.</p>
   </div>
+
   <button onclick="window.location.href='index.html'">🔁 다시 테스트하기</button><br>
-  <span style="color: #8cb3be;"><i><a style="color: #8cb3be;" href="https://balancefood1976.tistory.com/55">▶ 블로그 돌아가기</a></i></span>
+
+  <!-- 블로그로 이동하면서 동시에 top으로 스크롤 -->
+  <span style="color: #8cb3be;"><i><a style="color: #8cb3be;" href="https://balancefood1976.tistory.com/55#top-section">▶ 블로그 돌아가기</a></i></span>
+
+
 </body>
 </html>
